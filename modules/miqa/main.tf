@@ -3,7 +3,7 @@ module "miqa" {
   version = "0.10.0"
 
   project_slug     = "miqa"
-  subdomain_name   = var.environment
+  subdomain_name   = "app"
   route53_zone_id  = var.route53_zone_id
   heroku_team_name = var.heroku_team_name
   # The following require globally unique names
