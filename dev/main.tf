@@ -18,12 +18,12 @@ provider "heroku" {
   # Must set HEROKU_EMAIL, HEROKU_API_KEY envvars
 }
 
-resource "aws_route53_zone" "this" {
+data "aws_route53_zone" "this" {
   name = "miqaweb.io"
 }
 
 module "miqa_demo" {
   source           = "../modules/miqa"
   heroku_team_name = "kitware"
-  route53_zone_id  = aws_route53_zone.this.zone_id
+  route53_zone_id  = data.aws_route53_zone.this.zone_id
 }
