@@ -1,4 +1,12 @@
 terraform {
+  backend "remote" {
+    organization = "miqa"
+
+    workspaces {
+      name = "miqa-infrastructure"
+    }
+  }
+
   required_version = ">= 1.1"
 
   required_providers {
