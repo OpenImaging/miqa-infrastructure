@@ -19,7 +19,7 @@ provider "heroku" {
 }
 
 resource "aws_route53_zone" "this" {
-  name = "miqa.kitware.com"
+  name = "app.miqaweb.io"
 }
 
 module "miqa_demo" {

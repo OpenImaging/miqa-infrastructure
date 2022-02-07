@@ -4,8 +4,7 @@ module "miqa" {
 
   project_slug   = "miqa"
   subdomain_name = var.environment
-  # TODO uncomment once we are ready for domain name
-  # route53_zone_id  = var.route53_zone_id
+  route53_zone_id  = var.route53_zone_id
   heroku_team_name = var.heroku_team_name
   # The following require globally unique names
   heroku_app_name         = "miqa-demo"
