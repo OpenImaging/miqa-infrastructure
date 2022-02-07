@@ -19,7 +19,7 @@ provider "heroku" {
 }
 
 resource "aws_route53_zone" "this" {
-  name = "app.miqaweb.io"
+  name = "miqaweb.io"
 }
 
 module "miqa_demo" {
