@@ -16,6 +16,7 @@ module "django" {
   heroku_team_name = data.heroku_team.this.name
   subdomain_name   = "app"
 
+  django_cors_origin_whitelist = ["https://miqa.miqaweb.io"]
   heroku_app_name              = "miqa-demo"
   heroku_worker_dyno_quantity  = 0
   ec2_worker_instance_type     = "m4.large"
@@ -23,7 +24,6 @@ module "django" {
   ec2_worker_ssh_public_key    = var.ec2_worker_ssh_public_key
   ec2_worker_volume_size       = 100
   additional_django_vars = {
-    DJANGO_CORS_ORIGIN_WHITELIST = "https://miqa.miqaweb.io"
-    DJANGO_SENTRY_DSN            = "https://5f3cb898f0164c34ab13c90dfcee4ad4@o267860.ingest.sentry.io/6196580"
+    DJANGO_SENTRY_DSN = "https://5f3cb898f0164c34ab13c90dfcee4ad4@o267860.ingest.sentry.io/6196580"
   }
 }
