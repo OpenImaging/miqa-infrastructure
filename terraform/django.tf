@@ -22,4 +22,7 @@ module "django" {
   ec2_worker_instance_quantity = 1
   ec2_worker_ssh_public_key    = var.ec2_worker_ssh_public_key
   ec2_worker_volume_size       = 100
+  additional_django_vars = {
+    DJANGO_CORS_ORIGIN_WHITELIST = "https://miqa.miqaweb.io"
+  }
 }
