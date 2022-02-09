@@ -24,5 +24,6 @@ module "django" {
   ec2_worker_volume_size       = 100
   additional_django_vars = {
     DJANGO_CORS_ORIGIN_WHITELIST = "https://miqa.miqaweb.io"
+    DJANGO_SENTRY_DSN            = "https://5f3cb898f0164c34ab13c90dfcee4ad4@o267860.ingest.sentry.io/6196580"
   }
 }
