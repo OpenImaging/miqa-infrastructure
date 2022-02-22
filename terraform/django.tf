@@ -24,7 +24,7 @@ module "django" {
   ec2_worker_ssh_public_key    = var.ec2_worker_ssh_public_key
   ec2_worker_volume_size       = 100
   additional_django_vars = {
-    DJANGO_SENTRY_DSN     = "https://5f3cb898f0164c34ab13c90dfcee4ad4@o267860.ingest.sentry.io/6196580"
-    HOMEPAGE_REDIRECT_URL = "https://miqa.miqaweb.io/"
+    DJANGO_SENTRY_DSN            = "https://5f3cb898f0164c34ab13c90dfcee4ad4@o267860.ingest.sentry.io/6196580"
+    DJANGO_HOMEPAGE_REDIRECT_URL = "https://miqa.miqaweb.io/"
   }
 }
