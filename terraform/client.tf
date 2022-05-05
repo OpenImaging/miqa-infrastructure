@@ -3,5 +3,5 @@ resource "aws_route53_record" "client" {
   name    = "miqa"
   type    = "CNAME"
   ttl     = "300"
-  records = ["keen-hamilton-960da4.netlify.app."]
+  records = ["miqa.pages.dev"]
 }
