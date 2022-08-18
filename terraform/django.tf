@@ -19,6 +19,11 @@ module "django" {
   django_cors_origin_whitelist = ["https://miqa.miqaweb.io"]
   heroku_app_name              = "miqa-demo"
   heroku_worker_dyno_quantity  = 0
+  heroku_additional_buildpacks = [
+    # "ianpurvis/heroku-buildpack-version", to provide SOURCE_VERSION, for use by Sentry
+    # This buildpack is not registered, so get it directly from the Git repo.
+    "https://github.com/ianpurvis/heroku-buildpack-version.git",
+  ]
   ec2_worker_instance_type     = "m4.large"
   ec2_worker_instance_quantity = 1
   ec2_worker_ssh_public_key    = var.ec2_worker_ssh_public_key
