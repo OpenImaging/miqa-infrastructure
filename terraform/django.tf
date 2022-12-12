@@ -18,6 +18,9 @@ module "django" {
 
   django_cors_origin_whitelist = ["https://miqa.miqaweb.io"]
   heroku_app_name              = "miqa-demo"
+  heroku_postgresql_plan       = "mini"
+  heroku_web_dyno_size         = "basic"
+  heroku_worker_dyno_size      = "basic"
   heroku_worker_dyno_quantity  = 0
   heroku_additional_buildpacks = [
     # "ianpurvis/heroku-buildpack-version", to provide SOURCE_VERSION, for use by Sentry
